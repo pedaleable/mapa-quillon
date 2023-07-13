@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Catastro</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!--mapbox gl js-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!-- css interno -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- <div id="titulo">
+        <h1>catastro de ciclovías RM</h1>
+    </div> -->
+
+    <div id="map"></div>
+
+<div id="botones">
+
+    
+    <button id="boton-leyenda" onclick="ocultaLeyenda()">VER/OCULTAR LEYENDA</button>
+    <h4 class="flotante">visualización</h4>
+    <div id="selector-estilo">
+        <!-- <h>Would you like to see count values per hour or minute?</h><br> -->
+        <select id="selector">
+            <option value="simple" selected>simple</option>
+            <option value="normas">cumplimiento normas</option>
+            <option value="emplazamiento" >emplazamiento</option>
+        </select> 
+    </div>
+</div>
+
+    <div id='state-legend' class='leyenda'>
+        <h4>LEYENDA</h4>
+        <div id="leyenda-contenidos"></div>
+        <div id="leyenda-creditos">
+            <p>
+                Este mapa es un proyecto de <a href="https://pedaleable.org">Pedaleable.org</a>, y ha sido creado a partir de un recorrido exhaustivo de la red de ciclovías de Santiago, registrando los principales parámetros de diseño y un video en 360 grados para cada eje. Contó con el apoyo de Specialized y Garmin. Para más información <a href="https://www.pedaleable.org/2022/09/21/mapa/">haz click aquí.</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="map.js">    </script>
+
+</body>
+
+</html>

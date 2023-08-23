@@ -12,7 +12,7 @@ const map = new mapboxgl.Map({
   container: 'map', // container ID
   style: 'mapbox://styles/ignacioabe/cl7hqbqis002z15s0yv5kfp5w', // style URL
   center: [-72.463968, -36.745947], // starting position
-  zoom: 11 // starting zoom
+  zoom: 13 // starting zoom
 });
 
 
@@ -68,14 +68,15 @@ map.on("load", () => {
   });
 
   map.on('click', 'quilln-parcial-2m7l0n', (e) => {
-    let nombre = e.features[0].properties.nombre;
-    let longitud = e.features[0].properties.km;
+    let nombre = e.features[0].properties.NOMBRE;
+    let longitud = e.features[0].properties.KM;
     let direccionalidad = e.features[0].properties._tipo;
     let emplazamiento = e.features[0].properties._emplazamiento;
     let ancho = e.features[0].properties._ancho_cm;
-    let comuna = e.features[0].properties._comuna;
+    let comuna = e.features[0].properties.COMUNA;
     let videoID = e.features[0].properties.video_id;
-
+    let estado_señalética = e.features[0].properties._señalética_estado;
+    
     new mapboxgl.Popup()
       .setLngLat(e.lngLat)
       .setMaxWidth("300px")
@@ -87,6 +88,7 @@ map.on("load", () => {
       DIRECCIONALIDAD: ${direccionalidad}<br>
       EMPLAZAMIENTO: ${emplazamiento}<br>
       ANCHO (cm): ${ancho}<br>
+      ESTADO SEÑALÉTICA: ${estado_señalética}<br>
       <div class="contenedor-youtube"
       allowfullscreen>
         <iframe id="ytplayer" type="text/html" width="100%" height="100%"

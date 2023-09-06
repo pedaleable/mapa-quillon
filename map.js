@@ -137,25 +137,25 @@ function colorNorma() {
   map.setPaintProperty('quilln-parcial-2m7l0n', 'line-color',
     [
       "match",
-      ["get", "_eval_graduada_pedal_clasif"],
-      ["buena"],
+      ["get", "eevaluacion eje"],
+      ["bueno"],
       "#8BC34A",
       ["regular"],
       "#ffeb3b",
-      ["mala"],
+      ["malo"],
       "#ff9800",
-      ["muy mala"],
+      ["muy malo"],
       "#F44336",
       "#000000"
     ]
   );
 
   let leyendaNormas = `
-  <h5>CUMPLIMIENTO NORMAS DE DISEÑO</h5>
-  <div><span style='background-color: #8BC34A'></span>alto</div>
-  <div><span style='background-color: #ffeb3b'></span>medio</div>
-  <div><span style='background-color: #ff9800'></span>bajo</div>
-  <div><span style='background-color: #F44336'></span>muy bajo</div>
+  <h5>EVALUACIÓN EJES</h5>
+  <div><span style='background-color: #8BC34A'></span>bueno</div>
+  <div><span style='background-color: #ffeb3b'></span>regular</div>
+  <div><span style='background-color: #ff9800'></span>malo</div>
+  <div><span style='background-color: #F44336'></span>muy malo</div>
   `
 
   //cambia contenido de leyenda
